@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Timer } from "./Timer";
 import { Controlbutton } from "./Controlbutton";
+import styles from '../styles/Stopwatch.module.css'
+
 
 export const Stopwatch = () => {
     const [isActive, setIsActive] = useState(false);
@@ -37,7 +39,7 @@ export const Stopwatch = () => {
     };
 
     return (
-        <div className="stop-watch">
+        <div className={styles.stopwatch}>
             <Timer time={time} />
             <Controlbutton
                 active={isActive}
